@@ -22,49 +22,73 @@ $gradient : linear-gradient(90deg, $pink, $tomato);
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background: $charcoal-grey;
-    font-size: 16px;
+    font-size: 1em;
     font-family: 'Roboto';
     font-weight: 400;
     color: $dark-grey;
     display: flex;
     align-items: center;
+    align-content: center;
     justify-content: center;
+    @media (min-width: 1470px) {
+        height: 100vh;
+    }
 }
 
-.card {    
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
+.card {
     background: white;
-    border-radius: 20px;
     box-shadow: 10px 10px 25px $dark-grey;
 }
 
 // SUBCRIPTION FORM
 
 .form {
-    width: 960px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    transition: all 1s ease-in-out 1s;
+    @media (min-width: 875px) {
+        max-width: 60vw;
+    }
+    @media (min-width: 1470px) {
+        flex-direction: row;
+        border-radius: 20px;
+    }
 }
 
 .subscription {
-    margin: 20px;
+    margin: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-grow: 1;
+}
+
+.image-mobile {
+    width: 100%;
+    @media (min-width: 1470px) {
+        display: none;
+    }
+}
+
+.image-desktop {
+    display : none;
+    @media (min-width: 1470px) {
+        display: block;
+    }
 }
 
 h1 {
-    font-size: 65px;
+    font-size: 2.5em;
     font-weight: 700;
     margin: 10px 0;
+    @media (min-width: 875px) {
+        font-size: 4em;
+    }
 }
 
-p {
+.form p {
     margin: 10px 0;
 }
 
@@ -123,6 +147,7 @@ input:focus, input:active {
 button {
     margin: 20px 0;
     height: 50px;
+    flex-grow: 1;
     outline: none;
     border: none;
     border-radius: 5px;
@@ -141,21 +166,26 @@ button:hover {
 // SUCCESS MESSAGE
 
 .success {
-    width: 480px;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    padding: 25px 40px;
-    transition: all 1s ease-in-out 1s;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 2em;
+    padding: 25px 40px;  
+    @media (min-width: 875px) {
+        max-width: 30em;
+        height: auto;
+        border-radius: 20px;
+    }
 }
 
 .success img {
-    width: 50px;
-    margin-bottom: 20px;
+    height: 4em;
 }
 
 // HIDE FUNCTION
 
 .hide {
     display: none;
-    transition: all 1s ease-in-out 1s;
 }
