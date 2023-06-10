@@ -1,0 +1,161 @@
+//  FONTS
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+//  VARIABLES
+
+$tomato: hsl(12, 100%, 67%);
+$pink: hsl(342, 100%, 67%);
+$dark-grey: hsl(234, 29%, 20%);
+$charcoal-grey: hsl(235, 18%, 26%);
+$grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+$gradient : linear-gradient(90deg, $pink, $tomato);
+
+
+// STYLESHEET
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: $charcoal-grey;
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: $dark-grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {    
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 25px $dark-grey;
+}
+
+// SUBCRIPTION FORM
+
+.form {
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
+    transition: all 1s ease-in-out 1s;
+}
+
+.subscription {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 65px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+ul {
+    margin: 10px 0;
+    list-style: circle inside url(./assets/images/icon-list.svg);
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+form {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error-message {
+    color: red;
+}
+
+label {
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+input {
+    height: 50px;
+    outline: none;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    padding: 0 20px;
+    background-color: none;
+    color: $dark-grey;
+}
+
+.wrong {
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.2);
+    color: red;
+}
+
+input:focus, input:active {
+    background-color: none;
+    border-color: $dark-grey;
+    cursor: pointer;
+}
+
+button {
+    margin: 20px 0;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    background-color: $dark-grey;
+}
+
+button:hover {
+    cursor: pointer;
+    background-image: $gradient;
+}
+
+
+
+// SUCCESS MESSAGE
+
+.success {
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 40px;
+    transition: all 1s ease-in-out 1s;
+}
+
+.success img {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+// HIDE FUNCTION
+
+.hide {
+    display: none;
+    transition: all 1s ease-in-out 1s;
+}
